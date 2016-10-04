@@ -20,7 +20,7 @@
 	background-color:#b4a7d6;
 	border-color: #674ea7;
 }
-.btn-info:click {
+.btn-info:focus {
 	background-color:#b4a7d6;
 	border-color: #674ea7;
 }
