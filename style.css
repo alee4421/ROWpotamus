@@ -1,0 +1,27 @@
+
+
+.navbar{
+	background-color: #b4a7d6;
+	border-color:#b4a7d6;
+}
+
+.navbar-inverse {
+	font-family: georgia;
+	color: #ffffff;
+	background-color: #674ea7;
+
+}
+
+.btn-info {
+	background-color: #674ea7;
+	border-color: #674ea7;
+}
+.btn-info:hover {
+	background-color:#b4a7d6;
+	border-color: #674ea7;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+
+	background-color: #b4a7d6;
+}
