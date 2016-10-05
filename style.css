@@ -3,24 +3,28 @@
 .navbar{
 	background-color: #b4a7d6;
 	border-color:#b4a7d6;
+	color: white;
 }
 
 .navbar-inverse {
 	font-family: georgia;
-	color: #ffffff;
+	color: white;
 	background-color: #674ea7;
 
 }
 
-.btn-info {
+.btn{
+	color: white;
 	background-color: #674ea7;
 	border-color: #674ea7;
 }
-.btn-info:hover {
+.btn:hover {
+	color: white;
 	background-color:#b4a7d6;
 	border-color: #674ea7;
 }
-.btn-info:focus {
+.btn:active {
+	color: white;
 	background-color:#b4a7d6;
 	border-color: #674ea7;
 }
@@ -28,4 +32,9 @@
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
 
 	background-color: #b4a7d6;
+	color: black;
+}
+img {
+	width: 100%;
+	height: auto;
 }
