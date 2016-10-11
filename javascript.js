@@ -1,4 +1,10 @@
+
 var provider = new firebase.auth.GoogleAuthProvider();
+var user;
+
+$( document ).ready(function() {
+	$("#welcome").hide();
+});
 
 
 function signIn(){
@@ -6,8 +12,8 @@ function signIn(){
   // This gives you a Google Access Token. You can use it to access the Google API.
   var token = result.credential.accessToken;
   // The signed-in user info.
-  var user = result.user;
-  console.log(user);
+  user = result.user;
+  setLogIn();
   // ...
 }).catch(function(error) {
   // Handle Errors here.
@@ -19,6 +25,10 @@ function signIn(){
   var credential = error.credential;
   // ...
 });
+} 
 
-console.log("I got here so idk");
+function setLogIn() {
+	$("#login").hide();
+	$("#welcome"). show();
 }
+
