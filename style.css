@@ -8,9 +8,10 @@
 
 .navbar-inverse {
 	font-family: georgia;
-	color: white;
-	background-color: #674ea7;
-
+}
+img {
+	width: 100%;
+	height: auto;
 }
 
 .btn{
@@ -34,7 +35,6 @@
 	background-color: #b4a7d6;
 	color: black;
 }
-img {
-	width: 100%;
-	height: auto;
+.submit{
+	vertical-align: center;
 }
