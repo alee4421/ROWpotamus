@@ -1,8 +1,8 @@
 
 
 .navbar{
-	background-color: #b4a7d6;
-	border-color:#b4a7d6;
+	background-color: #674ea7;
+	border-color:#674ea7;
 	color: white;
 }
 
@@ -36,5 +36,5 @@ img {
 	color: black;
 }
 .submit{
-	vertical-align: center;
+	vertical-align: middle;
 }
