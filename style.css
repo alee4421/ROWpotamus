@@ -2,7 +2,7 @@
 
 .navbar{
 	background-color: #674ea7;
-	border-color:#674ea7;
+	border-color:#674;
 	color: white;
 }
 
@@ -36,5 +36,5 @@ img {
 	color: black;
 }
 .submit{
-	vertical-align: middle;
+	vertical-align: bottom;
 }
