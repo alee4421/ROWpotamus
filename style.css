@@ -18,6 +18,7 @@ img {
 	color: white;
 	background-color: #674ea7;
 	border-color: #674ea7;
+	vertical-align: bottom;
 }
 .btn:hover {
 	color: white;
