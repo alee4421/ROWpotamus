@@ -19,6 +19,7 @@ img {
 	background-color: #674ea7;
 	border-color: #674ea7;
 	vertical-align: bottom;
+	margin-top-width: 40;
 }
 .btn:hover {
 	color: white;
