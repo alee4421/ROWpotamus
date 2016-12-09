@@ -1,6 +1,21 @@
 
 var provider = new firebase.auth.GoogleAuthProvider();
 var user;
+  // Get a reference to the database service
+var database = firebase.database();
+var wTable = document.getElementByID("wOut");
+var distance;
+var time;
+var split;
+var today;
+
+var date = new Date();
+	var year = (String)date.getFullYear();
+	var month = (String)date.getMonth();
+	var day = (String)date.getDate();
+
+	var today = month + day + year;
+
 
 $( document ).ready(function() {
 	$("#welcome").hide();
@@ -25,10 +40,50 @@ function signIn(){
   var credential = error.credential;
   // ...
 });
+writeUserData(user, email,)
 } 
 
 function setLogIn() {
 	$("#login").hide();
 	$("#welcome"). show();
 }
+
+function writeUserData(user, email) {
+  firebase.database().ref('users/' + user).set({
+    username: name,
+    email: email,
+  });
+}
+
+//takes 
+function addWorkout() {
+	//search reading
+	//if user has no database create database using writeUserData
+	distance = document.getElementByID("distance").value;
+	
+	var hours = document.getElementByID("hours").value;
+	hours = hours*3600
+	var minutes = document.getElementByID("minutes").value;
+	minutes = minutes*60;
+	var seconds = document.getElementByID("seconds").value;
+	time = hours + minutes + seconds;
+	
+	var split = document.getElementByID("split").value;
+
+}
+
+//last function. reads all data from database
+function updateTable() {
+	
+}
+
+//first post of the day
+function writeNewPost(date, distance, time, split) {
+  // A post entry.
+  var postInitialData = {
+    date: date;
+    distance : distance;
+    time : time;
+    split : split;
+  };
 
