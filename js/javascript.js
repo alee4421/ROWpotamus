@@ -10,11 +10,11 @@ var split;
 var today;
 
 var date = new Date();
-	var year = (String)date.getFullYear();
-	var month = (String)date.getMonth();
-	var day = (String)date.getDate();
+	var year = date.getFullYear();
+	var month = date.getMonth();
+	var day = date.getDate();
 
-	var today = month + day + year;
+	var today = month + "" + day + "" + year;
 
 
 $( document ).ready(function() {
