@@ -78,12 +78,12 @@ function updateTable() {
 }
 
 //first post of the day
-function writeNewPost(date, distance, time, split) {
+/*function writeNewPost(date, distance, time, split) {
   // A post entry.
   var postInitialData = {
     date: date;
     distance : distance;
     time : time;
     split : split;
-  };
+  };*/
 
