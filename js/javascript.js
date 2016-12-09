@@ -51,7 +51,6 @@ function setLogIn() {
 function writeUserData(user) {
   firebase.database().ref('users/' + user).set({
     username: name,
-    email: email,
   });
 }
 
