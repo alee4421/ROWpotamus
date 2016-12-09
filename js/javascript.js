@@ -40,7 +40,7 @@ function signIn(){
   var credential = error.credential;
   // ...
 });
-writeUserData(user, email)
+writeUserData(user)
 } 
 
 function setLogIn() {
@@ -48,7 +48,7 @@ function setLogIn() {
 	$("#welcome"). show();
 }
 
-function writeUserData(user, email) {
+function writeUserData(user) {
   firebase.database().ref('users/' + user).set({
     username: name,
     email: email,
