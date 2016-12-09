@@ -3,7 +3,7 @@ var provider = new firebase.auth.GoogleAuthProvider();
 var user;
   // Get a reference to the database service
 var database = firebase.database();
-var wTable = document.getElementByID("wOut");
+var wTable = document.getElementById("wOut");
 var distance;
 var time;
 var split;
@@ -59,16 +59,16 @@ function writeUserData(user, email) {
 function addWorkout() {
 	//search reading
 	//if user has no database create database using writeUserData
-	distance = document.getElementByID("distance").value;
+	distance = document.getElementById("distance").value;
 	
-	var hours = document.getElementByID("hours").value;
+	var hours = document.getElementById("hours").value;
 	hours = hours*3600
-	var minutes = document.getElementByID("minutes").value;
+	var minutes = document.getElementById("minutes").value;
 	minutes = minutes*60;
-	var seconds = document.getElementByID("seconds").value;
+	var seconds = document.getElementById("seconds").value;
 	time = hours + minutes + seconds;
 	
-	var split = document.getElementByID("split").value;
+	var split = document.getElementById("split").value;
 
 }
 
