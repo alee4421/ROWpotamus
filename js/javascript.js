@@ -40,7 +40,7 @@ function signIn(){
   var credential = error.credential;
   // ...
 });
-writeUserData(user, email,)
+writeUserData(user, email)
 } 
 
 function setLogIn() {
