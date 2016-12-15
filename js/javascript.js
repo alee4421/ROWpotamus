@@ -3,7 +3,7 @@ var provider = new firebase.auth.GoogleAuthProvider();
 var user;
   // Get a reference to the database service
 var database = firebase.database();
-var wTable = document.getElementById("wOut");
+var wTable = document.getElementByID("wOut");
 var distance;
 var time;
 var split;
@@ -12,9 +12,9 @@ var today;
 var date = new Date();
 	var year = date.getFullYear();
 	var month = date.getMonth();
-	var day = date.getDate();
+	var day = (String)date.getDate();
 
-	var today = month + "" + day + "" + year;
+	var today = month + day + year;
 
 
 $( document ).ready(function() {
@@ -40,7 +40,7 @@ function signIn(){
   var credential = error.credential;
   // ...
 });
-writeUserData(user)
+writeUserData(user);
 } 
 
 function setLogIn() {
@@ -50,7 +50,7 @@ function setLogIn() {
 
 function writeUserData(user) {
   firebase.database().ref('users/' + user).set({
-    username: name,
+    name: user,
   });
 }
 
@@ -58,16 +58,17 @@ function writeUserData(user) {
 function addWorkout() {
 	//search reading
 	//if user has no database create database using writeUserData
-	distance = document.getElementById("distance").value;
+	distance = document.getElementByID("distance").value;
 	
-	var hours = document.getElementById("hours").value;
+	var hours = document.getElementByID("hours").value;
 	hours = hours*3600
-	var minutes = document.getElementById("minutes").value;
+	var minutes = document.getElementByID("minutes").value;
 	minutes = minutes*60;
-	var seconds = document.getElementById("seconds").value;
+	var seconds = document.getElementByID("seconds").value;
 	time = hours + minutes + seconds;
 	
-	var split = document.getElementById("split").value;
+	var split = document.getElementByID("split").value;
+	writeNewPost();
 
 }
 
@@ -77,12 +78,22 @@ function updateTable() {
 }
 
 //first post of the day
-/*function writeNewPost(date, distance, time, split) {
+function writeNewPost(date, distance, time, split) {
   // A post entry.
   var postInitialData = {
     date: date;
     distance : distance;
     time : time;
     split : split;
-  };*/
+  };
+
+  // Get a key for a new Post.
+  var newPostKey = firebase.database().ref().child('workouts').push().key;
+
+  // Write the new post's data simultaneously in the posts list and the user's post list.
+  var updates = {};
+  updates['/workouts/' + newPostKey] = postInitialData;
+
+  return firebase.database().ref().update(updates);
+}
 
