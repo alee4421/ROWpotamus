@@ -4,7 +4,7 @@ var user;
   // Get a reference to the database service
 var database = firebase.database();
 var wTable = document.getElementByID("wOut");
-var distance = 0;
+var distance;
 var time;
 var split;
 var today;
@@ -81,9 +81,9 @@ function updateTable() {
 function writeNewPost(date, distance, time, split) {
   // A post entry.
   var postInitialData = {
-    date: date
-    distance : distance
-    time : time
+    date: date,
+    distance : distance,
+    time : time,
     split : split
   };
 
