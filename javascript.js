@@ -58,16 +58,14 @@ function writeUserData(user) {
 function addWorkout() {
 	//search reading
 	//if user has no database create database using writeUserData
-	distance = document.getElementByID("distance").value;
+	distance = document.getElementById("distance").value;
 	
-	var hours = document.getElementByID("hours").value;
-	hours = hours*3600
-	var minutes = document.getElementByID("minutes").value;
+	var hours = document.getElementById("minutes").value;
 	minutes = minutes*60;
-	var seconds = document.getElementByID("seconds").value;
+	var seconds = document.getElementById("seconds").value;
 	time = hours + minutes + seconds;
 	
-	var split = document.getElementByID("split").value;
+	var split = document.getElementById("split").value;
 	writeNewPost();
 
 }
