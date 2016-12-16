@@ -3,7 +3,7 @@ var provider = new firebase.auth.GoogleAuthProvider();
 var user;
   // Get a reference to the database service
 var database = firebase.database();
-var wTable = document.getElementByID("wOut");
+var wTable = document.getElementById("wOut");
 var distance;
 var time;
 var split;
