@@ -4,7 +4,7 @@ var user;
   // Get a reference to the database service
 var database = firebase.database();
 var wTable = document.getElementByID("wOut");
-var distance;
+var distance = 0;
 var time;
 var split;
 var today;
