@@ -81,10 +81,10 @@ function updateTable() {
 function writeNewPost(date, distance, time, split) {
   // A post entry.
   var postInitialData = {
-    date: date;
-    distance : distance;
-    time : time;
-    split : split;
+    date: date
+    distance : distance
+    time : time
+    split : split
   };
 
   // Get a key for a new Post.
