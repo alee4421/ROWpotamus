@@ -86,12 +86,12 @@ function writeNewPost(date, distance, time, split) {
 }
 
   // // Get a key for a new Post.
-  // var newPostKey = firebase.database().ref().child('workouts').push().key;
+  var newPostKey = firebase.database().ref().child('workouts').push().key;
 
   // // Write the new post's data simultaneously in the posts list and the user's post list.
-  // var updates = {};
-  // updates['/workouts/' + newPostKey] = postInitialData;
+  var updates = {};
+  updates['/workouts/' + newPostKey] = postInitialData;
 
-  // return firebase.database().ref().update(updates);
+  return firebase.database().ref().update(updates);
 }
 
