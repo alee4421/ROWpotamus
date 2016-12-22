@@ -66,7 +66,7 @@ function addWorkout() {
 	time = hours + minutes + seconds;
 	
 	var split = document.getElementById("split").value;
-	writeNewPost();
+	writeNewPost(date, distance, time, split);
 
 }
 
@@ -77,21 +77,21 @@ function updateTable() {
 
 //first post of the day
 function writeNewPost(date, distance, time, split) {
-  // A post entry.
-  var postInitialData = {
+	firebase.database('/database/').update({
     date: date,
     distance : distance,
     time : time,
     split : split
-  };
+  });
+}
 
-  // Get a key for a new Post.
-  var newPostKey = firebase.database().ref().child('workouts').push().key;
+  // // Get a key for a new Post.
+  // var newPostKey = firebase.database().ref().child('workouts').push().key;
 
-  // Write the new post's data simultaneously in the posts list and the user's post list.
-  var updates = {};
-  updates['/workouts/' + newPostKey] = postInitialData;
+  // // Write the new post's data simultaneously in the posts list and the user's post list.
+  // var updates = {};
+  // updates['/workouts/' + newPostKey] = postInitialData;
 
-  return firebase.database().ref().update(updates);
+  // return firebase.database().ref().update(updates);
 }
 
