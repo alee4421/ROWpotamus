@@ -83,7 +83,6 @@ function writeNewPost(date, distance, time, split) {
     time : time,
     split : split
   });
-}
 
   // // Get a key for a new Post.
   var newPostKey = firebase.database().ref().child('workouts').push().key;
