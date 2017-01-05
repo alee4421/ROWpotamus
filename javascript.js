@@ -92,6 +92,6 @@ function writeNewPost(date, distance, time, split) {
   var updates = {};
   updates['/workouts/' + newPostKey] = postInitialData;
 
-  return firebase.database().ref().update(updates);
+  firebase.database().ref().update(updates);
 }
 
