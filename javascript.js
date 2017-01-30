@@ -40,26 +40,7 @@ function signIn(){
   var credential = error.credential;
   // ...
 });
-writeUserData(user);
-} 
-
-function setLogIn() {
-	$("#login").hide();
-	$("#welcome"). show();
-}
-
-function writeUserData(user) {
-  firebase.database().ref('users/' + user).set({
-    name: user,
-  });
-}
-
-//takes 
-function addWorkout() {
-	//search reading
-	//if user has no database create database using writeUserData
-	distance = document.getElementById("distance").value;
-	
+//writeUserData(user);
 	var hours = document.getElementById("minutes").value;
 	minutes = minutes*60;
 	var seconds = document.getElementById("seconds").value;
@@ -71,6 +52,26 @@ function addWorkout() {
 }
 
 //last function. reads all data from database
+} 
+
+function setLogIn() {
+	$("#login").hide();
+	$("#welcome"). show();
+}
+
+function writeUserData(user) {
+  firebase.database().ref('users/' + user).update({
+    name: user,
+  });
+}
+
+//takes 
+function addWorkout() {
+	//search reading
+	//if user has no database create database using writeUserData
+	distance = document.getElementById("distance").value;
+	console.log(distance);
+	
 function updateTable() {
 	
 }
