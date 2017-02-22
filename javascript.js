@@ -7,8 +7,8 @@ var wTable = document.getElementById("wOut");
 var distance;
 var time;
 var split;
-var today;
-
+var today
+var rowNum = 0;
 var date = new Date();
 	var year = date.getFullYear();
 	var month = date.getMonth();
@@ -40,58 +40,45 @@ function signIn(){
   var credential = error.credential;
   // ...
 });
-//writeUserData(user);
-	var hours = document.getElementById("minutes").value;
-	minutes = minutes*60;
-	var seconds = document.getElementById("seconds").value;
-	time = hours + minutes + seconds;
-	
-	var split = document.getElementById("split").value;
-	writeNewPost(date, distance, time, split);
+
 
 }
 
 //last function. reads all data from database
-} 
 
 function setLogIn() {
 	$("#login").hide();
 	$("#welcome"). show();
 }
 
-function writeUserData(user) {
-  firebase.database().ref('users/' + user).update({
-    name: user,
-  });
-}
+
 
 //takes 
 function addWorkout() {
 	//search reading
 	//if user has no database create database using writeUserData
 	distance = document.getElementById("distance").value;
-	console.log(distance);
+	
+	var hours = document.getElementById("minutes").value;
+	minutes = minutes*60;
+	var seconds = document.getElementById("seconds").value;
+	time = hours + minutes + seconds;
+	
+	var split = document.getElementById("split").value;
+	//writeNewPost(date, distance, time, split);
 	
 function updateTable() {
-	
-}
+	var table = getElementById(wOuts);
+	var row = insertRow(rowNum);
+	rowNum++;
+	var cellDate = row.insertCell(0);
+	var cellDistance = row.insertCell(1);
+	var cellTime = row.insertCell(2);
+	var cellSplit = row.insertCell(3);
 
-//first post of the day
-function writeNewPost(date, distance, time, split) {
-	firebase.database('/database/').update({
-    date: date,
-    distance : distance,
-    time : time,
-    split : split
-  });
-
-  // // Get a key for a new Post.
-  var newPostKey = firebase.database().ref().child('workouts').push().key;
-
-  // // Write the new post's data simultaneously in the posts list and the user's post list.
-  var updates = {};
-  updates['/workouts/' + newPostKey] = postInitialData;
-
-  firebase.database().ref().update(updates);
+	cellDate.innerHTML = today;
+	cellDistance = distance;
+	cellTime = time;
+	cellSplit = split;
 }
 
