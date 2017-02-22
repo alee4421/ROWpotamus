@@ -42,8 +42,6 @@ function signIn(){
 });
 
 
-}
-
 //last function. reads all data from database
 
 function setLogIn() {
@@ -58,7 +56,7 @@ function addWorkout() {
 	//search reading
 	//if user has no database create database using writeUserData
 	distance = document.getElementById("distance").value;
-	
+
 	var hours = document.getElementById("minutes").value;
 	minutes = minutes*60;
 	var seconds = document.getElementById("seconds").value;
