@@ -40,6 +40,7 @@ function signIn(){
   var credential = error.credential;
   // ...
 });
+}
 
 
 //last function. reads all data from database
