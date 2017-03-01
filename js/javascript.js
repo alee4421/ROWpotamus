@@ -63,7 +63,7 @@ function addWorkout() {
 	var seconds = document.getElementById("seconds").value;
 	time = hours + minutes + seconds;
 	
-	var split = document.getElementById("split").value;
+	var split = document.getElementById("splitLength").value;
 	//writeNewPost(date, distance, time, split);
 }
 	
