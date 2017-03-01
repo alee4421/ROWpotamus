@@ -69,7 +69,7 @@ function addWorkout() {
 }
 	
 function updateTable() {
-	var table = getElementById(wOuts);
+	var table = document.getElementById(wOuts);
 	var row = insertRow(rowNum);
 	rowNum++;
 	var cellDate = row.insertCell(0);
