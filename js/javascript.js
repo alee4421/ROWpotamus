@@ -65,6 +65,7 @@ function addWorkout() {
 	
 	var split = document.getElementById("splitLength").value;
 	//writeNewPost(date, distance, time, split);
+	updateTable();
 }
 	
 function updateTable() {
