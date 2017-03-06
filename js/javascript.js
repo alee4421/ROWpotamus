@@ -70,7 +70,7 @@ function addWorkout() {
 	
 function updateTable() {
 	var table = document.getElementById(wOuts);
-	var row = table.insertRow(rowNum);
+	var row = table.insertRow(0);
 	rowNum++;
 	var cellDate = row.insertCell(0);
 	var cellDistance = row.insertCell(1);
