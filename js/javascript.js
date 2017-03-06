@@ -66,11 +66,12 @@ function addWorkout() {
 	var split = document.getElementById("splitLength").value;
 	//writeNewPost(date, distance, time, split);
 	updateTable();
+	rowNum++;
 }
 	
 function updateTable() {
-	var table = document.getElementById(wOuts);
-	var row = table.insertRow(0);
+	var table = document.getElementById("wOuts");
+	var row = table.insertRow(rowNum);
 	rowNum++;
 	var cellDate = row.insertCell(0);
 	var cellDistance = row.insertCell(1);
