@@ -14,8 +14,7 @@ var date = new Date();
 	var month = date.getMonth();
 	var day = date.getDate();
 
-	var today = month + day + year;
-
+	var today = month +  "/" + day + "/" + year;
 
 $( document ).ready(function() {
 	$("#welcome").hide();
