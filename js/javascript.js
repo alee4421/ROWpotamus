@@ -8,7 +8,7 @@ var distance;
 var time;
 var split;
 var today
-var rowNum = 0;
+var rowNum = 1;
 var date = new Date();
 	var year = date.getFullYear();
 	var month = date.getMonth();
@@ -42,7 +42,6 @@ function signIn(){
 });
 }
 
-
 //last function. reads all data from database
 
 function setLogIn() {
@@ -66,7 +65,6 @@ function addWorkout() {
 	var split = document.getElementById("splitLength").value;
 	//writeNewPost(date, distance, time, split);
 	updateTable();
-	rowNum++;
 }
 	
 function updateTable() {
