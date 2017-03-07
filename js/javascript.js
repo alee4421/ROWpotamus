@@ -4,17 +4,18 @@ var user;
   // Get a reference to the database service
 var database = firebase.database();
 var wTable = document.getElementById("wOut");
-var distance;
+const distance;
 var time;
 var split;
 var today
 var rowNum = 1;
 var date = new Date();
 	var year = date.getFullYear();
-	var month = date.getMonth() + 1;
+	var month = date.getMonth();
 	var day = date.getDate();
 
 	var today = month +  "/" + day + "/" + year;
+
 
 $( document ).ready(function() {
 	$("#welcome").hide();
@@ -76,8 +77,8 @@ function updateTable() {
 	var cellSplit = row.insertCell(3);
 
 	cellDate.innerHTML = today;
-	cellDistance = distance;
-	cellTime = time;
-	cellSplit = split;
+	cellDistance.innerHTML = distance;
+	cellTime.innerHTML = time;
+	cellSplit.innerHTML = split;
 }
 
