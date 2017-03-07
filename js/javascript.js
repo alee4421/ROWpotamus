@@ -11,7 +11,7 @@ var today
 var rowNum = 1;
 var date = new Date();
 	var year = date.getFullYear();
-	var month = date.getMonth();
+	var month = date.getMonth() + 1;
 	var day = date.getDate();
 
 	var today = month +  "/" + day + "/" + year;
@@ -57,7 +57,9 @@ function addWorkout() {
 	//if user has no database create database using writeUserData
 	distance = document.getElementById("distance").value;
 
-	var hours = document.getElementById("minutes").value;
+	var hours = document.getElementById("hours").value;
+	hours = hours*360;
+	var minutes = document.getElementById("minutes").value;
 	minutes = minutes*60;
 	var seconds = document.getElementById("seconds").value;
 	time = hours + minutes + seconds;
