@@ -58,10 +58,11 @@ function addWorkout() {
 	distance = document.getElementById("distance").value;
 
 	var hours = document.getElementById("hours").value;
-	hours = hours*360;
+	hours = parseInt(hours*360);
 	var minutes = document.getElementById("minutes").value;
-	minutes = minutes*60;
+	minutes = parseInt(minutes*60);
 	var seconds = document.getElementById("seconds").value;
+	seconds = parseInt(seconds);
 	time = hours + minutes + seconds;
 	
 	var split = document.getElementById("splitLength").value;
