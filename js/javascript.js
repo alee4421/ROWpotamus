@@ -71,7 +71,7 @@ function addWorkout() {
 	numOfSplit = time/numOfSplit;
 	var i = numOfSplit/60;
 	var t = numOfSplit%60;
-	numOfSPlit = i + ":" + t;
+	numOfSplit = i + ":" + t;
 
 
 	
