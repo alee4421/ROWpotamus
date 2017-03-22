@@ -7,7 +7,8 @@ var wTable = document.getElementById("wOut");
 var distance;
 var time;
 var split;
-var today
+var numOfSplit;
+var today;
 var rowNum = 1;
 var date = new Date();
 	var year = date.getFullYear();
@@ -66,6 +67,14 @@ function addWorkout() {
 	time = hours + minutes + seconds;
 	
 	var split = document.getElementById("splitLength").value;
+	numOfSplit = distance/500;
+	numOfSplit = time/numOfSplit;
+	var i = numOfSplit/60;
+	var t = numOfSplit%60;
+	numOfSPlit = i + ":" + t;
+
+
+	
 	//writeNewPost(date, distance, time, split);
 	updateTable();
 }
@@ -82,6 +91,6 @@ function updateTable() {
 	cellDate.innerHTML = today;
 	cellDistance.innerHTML = distance;
 	cellTime.innerHTML = time;
-	cellSplit.innerHTML = split;
+	cellSplit.innerHTML = numOfSplit;
 }
 
