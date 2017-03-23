@@ -70,7 +70,13 @@ function addWorkout() {
 	numOfSplit = distance/500;
 	numOfSplit = time/numOfSplit;
 	var i = parseInt(numOfSplit/60);
-	var t = parseInt(numOfSplit%60);
+	var t = numOfSplit%60;
+	t = Math.round(t * 100) / 100;
+
+	if (t < 10) {
+		t = "0" + t;
+	}
+
 	numOfSplit = i + ":" + t;
 
 
