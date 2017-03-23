@@ -69,8 +69,8 @@ function addWorkout() {
 	var split = document.getElementById("splitLength").value;
 	numOfSplit = distance/500;
 	numOfSplit = time/numOfSplit;
-	var i = numOfSplit/60;
-	var t = numOfSplit%60;
+	var i = parseInt(numOfSplit/60);
+	var t = parseInt(numOfSplit%60);
 	numOfSplit = i + ":" + t;
 
 
