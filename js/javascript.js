@@ -71,7 +71,7 @@ function addWorkout() {
 	numOfSplit = time/numOfSplit;
 	var i = parseInt(numOfSplit/60);
 	var t = numOfSplit%60;
-	t = Math.round(t * 100) / 100;
+	t = Math.round(t * 10) / 10;
 
 	if (t < 10) {
 		t = "0" + t;
