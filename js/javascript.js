@@ -63,6 +63,7 @@ function addWorkout() {
 	var minutes = document.getElementById("minutes").value;
 	minutes = parseInt(minutes*60);
 	var seconds = document.getElementById("seconds").value;
+	seconds =parseFloat(seconds);
 	//seconds = parseInt(seconds);
 	time = hours + minutes + seconds;
 	
